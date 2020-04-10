@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>zigbee2mqtt</Name>
+  <Repository>koenkk/zigbee2mqtt</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>HomeAutomation:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams>--privileged=true</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1586516367</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/run/udev</HostDir>
+      <ContainerDir>/run/udev</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Zigbee Adapter" Target="" Default="/dev/ttyACM0" Mode="" Description="Container Device: " Type="Device" Display="always" Required="true" Mask="false">/dev/ttyACM0</Config>
+  <Config Name="Host Path 1" Target="/run/udev" Default="" Mode="ro" Description="Container Path: /run/udev" Type="Path" Display="advanced" Required="true" Mask="false">/run/udev</Config>
+</Container>
