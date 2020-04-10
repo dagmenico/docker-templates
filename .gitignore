@@ -1,0 +1,5 @@
+#ignore VSCode stuff
+.vscode
+
+# ignore mac generated files
+.DS_Store
