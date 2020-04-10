@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Awtrix</Name>
+  <Repository>whyet/awtrix2:latest</Repository>
+  <Registry>https://hub.docker.com/r/whyet/awtrix2</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>HomeAutomation: Other: MediaApp:Other Network:VPN</Category>
+  <WebUI>http://[IP]:[PORT:7000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/dagmenico/docker-templates/master/dagmenico/images/awtrix-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1586514229</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7000</HostPort>
+        <ContainerPort>7000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7001</HostPort>
+        <ContainerPort>7001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/awtrix/Apps</HostDir>
+      <ContainerDir>/data/Apps</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/awtrix/config</HostDir>
+      <ContainerDir>/data/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/awtrix/logs</HostDir>
+      <ContainerDir>/data/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="UI server" Target="7000" Default="" Mode="tcp" Description="Container Port: 7000" Type="Port" Display="always" Required="false" Mask="false">7000</Config>
+  <Config Name="Server" Target="7001" Default="" Mode="tcp" Description="Container Port: 7001" Type="Port" Display="always" Required="false" Mask="false">7001</Config>
+  <Config Name="Apps" Target="/data/Apps" Default="" Mode="rw" Description="Container Path: /data/Apps" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/awtrix/Apps</Config>
+  <Config Name="Config" Target="/data/config" Default="" Mode="rw" Description="Container Path: /data/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/awtrix/config</Config>
+  <Config Name="Logs" Target="/data/logs" Default="" Mode="rw" Description="Container Path: /data/logs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/awtrix/logs</Config>
+</Container>
