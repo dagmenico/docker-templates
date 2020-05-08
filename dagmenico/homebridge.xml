@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>homebridge</Name>
+  <Repository>oznu/homebridge</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/dagmenico/docker-templates/master/dagmenico/images/homebridge-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1588956047</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/homebridge</HostDir>
+      <ContainerDir>/homebridge</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1</Value>
+      <Name>HOMEBRIDGE_CONFIG_UI</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data path" Target="/homebridge" Default="/mnt/user/appdata/homebridge" Mode="rw" Description="Container Path: /homebridge" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/homebridge</Config>
+  <Config Name="UI port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="advanced" Required="true" Mask="false">8080</Config>
+  <Config Name="UI enabled" Target="HOMEBRIDGE_CONFIG_UI" Default="1" Mode="" Description="Enable or disable UI:&#13;&#10;1 -&amp;gt; enabled&#13;&#10;0 -&amp;gt; disabled" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+</Container>
