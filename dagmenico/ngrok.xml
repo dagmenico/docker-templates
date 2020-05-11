@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ngrok</Name>
+  <Repository>wernight/ngrok</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>Cloud: HomeAutomation: Productivity: Security: Tools: Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1589187772</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>NGROK_AUTH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NGROK_SUBDOMAIN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NGROK_HOSTNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NGROK_REMOTE_ADDR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NGROK_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NGROK_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>HTTP</Value>
+      <Name>NGROK_PROTOCOL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>eu</Value>
+      <Name>NGROK_REGION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NGROK_BINDTLS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="NGROK_AUTH" Target="NGROK_AUTH" Default="" Mode="" Description="Authentication key for your Ngrok account. This is needed for custom subdomains, custom domains, and HTTP authentication." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NGROK_SUBDOMAIN" Target="NGROK_SUBDOMAIN" Default="" Mode="" Description="Name of the custom subdomain to use for your tunnel. You must also provide the authentication token." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NGROK_HOSTNAME" Target="NGROK_HOSTNAME" Default="" Mode="" Description="Paying Ngrok customers can specify a custom domain. Only one subdomain or domain can be specified, with the domain taking priority." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NGROK_REMOTE_ADDR" Target="NGROK_REMOTE_ADDR" Default="" Mode="" Description="Name of the reserved TCP address to use for a TCP tunnel. You must also provide the authentication token." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NGROK_USERNAME" Target="NGROK_USERNAME" Default="" Mode="" Description="Username to use for HTTP authentication on the tunnel. You must also specify an authentication token." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NGROK_PASSWORD" Target="NGROK_PASSWORD" Default="" Mode="" Description="Password to use for HTTP authentication on the tunnel. You must also specify an authentication token." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="NGROK_PROTOCOL" Target="NGROK_PROTOCOL" Default="HTTP" Mode="" Description="Can either be HTTP or TCP, and it defaults to HTTP if not specified. If set to TCP, Ngrok will allocate a port instead of a subdomain and proxy TCP requests directly to your application." Type="Variable" Display="always-hide" Required="false" Mask="false">HTTP</Config>
+  <Config Name="NGROK_PORT" Target="80" Default="80" Mode="tcp" Description="Port to expose (defaults to 80 for HTTP protocol). If the server is non-local, the hostname can also be specified, e.g. 192.168.0.102:80." Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="NGROK_REGION" Target="NGROK_REGION" Default="" Mode="" Description="Location of the ngrok tunnel server; can be us (United States, default), eu (Europe), ap (Asia/Pacific) or au (Australia)" Type="Variable" Display="always" Required="false" Mask="false">eu</Config>
+  <Config Name="NGROK_BINDTLS" Target="NGROK_BINDTLS" Default="" Mode="" Description="Toggle tunneling only HTTP or HTTPS traffic. When true, Ngrok only opens the HTTPS endpoint. When false, Ngrok only opens the HTTP endpoint" Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
