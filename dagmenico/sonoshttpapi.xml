@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>sonoshttpapi</Name>
+  <Repository>mkshb/sonoshttpapi:amd64-latest</Repository>
+  <Registry/>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1599553083</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonoshttpapi/settings</HostDir>
+      <ContainerDir>/app/settings</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonoshttpapi/clips</HostDir>
+      <ContainerDir>/app/static/clips</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonoshttpapi/cache</HostDir>
+      <ContainerDir>/app/cache</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/sonoshttpapi/presets</HostDir>
+      <ContainerDir>/app/presets</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Settings" Target="/app/settings" Default="/mnt/user/appdata/sonoshttpapi/settings" Mode="rw" Description="Container Path: /app/settings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonoshttpapi/settings</Config>
+  <Config Name="Clips" Target="/app/static/clips" Default="/mnt/user/appdata/sonoshttpapi/clips" Mode="rw" Description="Container Path: /app/static/clips" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonoshttpapi/clips</Config>
+  <Config Name="Cache" Target="/app/cache" Default="/mnt/user/appdata/sonoshttpapi/cache" Mode="rw" Description="Container Path: /app/cache" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonoshttpapi/cache</Config>
+  <Config Name="Presets" Target="/app/presets" Default="/mnt/user/appdata/sonoshttpapi/presets" Mode="rw" Description="Container Path: /app/presets" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/sonoshttpapi/presets</Config>
+</Container>
